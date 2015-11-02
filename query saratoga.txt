@@ -1,0 +1,6 @@
+Vanue - what 
+Message -
+We only store data(yes/no) in user meta backend side ? please confirm ? when it will be used ?
+
+Directory > category > sub category 
+When we click on listing items, it will show details page of that item. Please confirm?
