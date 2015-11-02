@@ -1,0 +1,59 @@
+@mixin button-variant($color, $background ) {
+  color: $color;
+  background-color: $background;
+
+
+  
+  &:hover,&.hover {
+    color: $color;
+    background-color: lighten($background, 10%);
+  }
+  &:active,
+  &.active{
+    color: $color;
+    background-color: #121010;
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+    }
+  }
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+
+@mixin link-variant($color) {
+  color: $color;
+    
+  &:hover,&.hover {
+    color: lighten($color, 10%);
+  }
+  &:active,
+  &.active{
+    color: #121010;
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: $color;
+    }
+  }
+}

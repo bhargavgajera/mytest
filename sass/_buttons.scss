@@ -1,0 +1,180 @@
+.btn {
+ font-size: 0.86em;
+ line-height: $btn-line-height;
+    height: $btn-line-height;
+    display: inline-block;
+    width: 170px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'maison_neuebook'; 
+    position: relative;
+    margin: 5px 0;
+    .icon { position: absolute; top:50%; transform: translateY(-50%)}
+    .icon-left { left: 16px; font-size: 17px; }
+    .icon-right {right: 20px; font-size: 19px;  }
+}
+
+
+
+
+.btn-default { @include button-variant($brand-primary, $color-white);}
+.btn-primary { @include button-variant($btn-primary-color, $btn-primary-bg);}
+.btn-secondary {@include button-variant($btn-secondary-color, $btn-secondary-bg);}
+.btn-accent {@include button-variant($btn-accent-color, $btn-accent-bg);}
+.btn-fab { width: $btn-line-height; margin: 5px 10px;
+    .fa { font-size: 22px; line-height: $btn-line-height;}
+}
+
+.link { font-size:1.14em; text-decoration: none;}
+.link-primary { @include link-variant($brand-primary);}
+.link-secondary {@include link-variant($brand-secondary);}
+.link-accent {@include link-variant($brand-accent);}
+
+
+.bg-primary {background: $brand-primary; color:$color-white;}
+.bg-secondary {background: $brand-secondary; color:$color-white;}
+.bg-accent{background: $brand-accent; color:$color-white;}
+
+
+.row { margin: 0 -15px; clear: both; overflow: hidden;}
+.col { float: left;
+    &.col-50 { width: 50%; padding:0 15px;}
+    &.col-60 { width: 60%; padding:0 15px;}
+    &.col-40 { width: 40%; padding:0 15px;}
+}
+
+
+.form-group { float: left; margin: 5px; position: relative;
+    .msg {color: $brand-secondary; padding: 5px 20px; display: none;}
+    &.has-error{
+        .msg { display: block;}
+        &:before { content: "\f071";font-family: 'FontAwesome'; display: block; font-size: 15px; position: absolute; right: 15px; top: 12px; color: $brand-secondary;}
+    }
+    
+}
+.form-control { border: none; background:#fff; font-size: 1em; line-height: 42px; height: 42px; padding:0 40px 0 20px;  min-width: 220px; overflow: hidden; text-overflow: ellipsis;
+}
+
+
+.tiles { margin: 0 -25px; display: flex;
+    .tile {flex: 1;background:$color-white; padding: 60px 50px 100px 50px; text-align: center; margin: 0 25px; width: 50%; position: relative;
+        .tile-title { margin: 30px 0; color: #121010;}
+        .btn { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%)}
+        figure { height: 160px; width: auto; margin: -60px -50px 0; background-size: cover; background-repeat: no-repeat; background-position: center top;}
+    }
+    .tile-icon{ font-size: 30px; }
+}
+
+.top-bar { position: relative;
+ &:before { width:70px; height: 2px;margin-bottom: 30px; content: ""; display: block; background:$brand-secondary; }
+    &.bar-center{ text-align: center;
+        &:before { margin: 0 auto 30px;}
+    }
+}
+
+.white-bar { position: relative;
+    &:before{ width:145px; height: 6px; content: ""; display: block; background:$color-white; position: absolute; bottom: 130%; left: 0;}
+}
+
+
+
+.split {display: flex; background:$color-white;
+    .half { width: 50%; margin: 0px; padding: 60px 100px 60px 60px; flex: 1;}
+    .split-title { margin: 30px 0;}
+    .btn,.link { margin-top: 30px;}
+    figure {background-size: cover; background-repeat: no-repeat; background-position: center;}
+    
+}
+
+
+.list { display: flex; background:$color-white; margin-bottom: 30px;
+    .item {padding: 60px;}
+    .detail { padding-left: 0;padding-right: 0; 
+        .icon { font-size: 18px; width: 22px;color:$brand-secondary; text-align: center;}
+    }
+    figure { margin: 0px;  width: 480px;
+        img { width: 100%;}
+    }
+    .button-block{text-align: center; height: 172px; align-self: center;}
+}
+
+
+
+.breadcrumb { list-style: none;
+    & > li { display: inline-block;font-size: 12px;}
+    & li + li::before {
+    color: $brand-accent;
+     content: "\f105";font-family: 'FontAwesome';
+    padding: 0 5px;
+        font-size: 14px;
+        text-align: center;
+    }
+    a { @include link-variant($brand-secondary);}
+}
+
+
+.people-detail {  display: flex;flex-wrap: nowrap;
+    > .item {   flex: 1;padding-right: 60px;}
+    figure {  max-width: 430px;}
+    .detail {} 
+}
+
+
+.people-thumb { margin: 45px -15px; overflow: hidden;
+    > .people { width: 33.33%; padding: 15px 15px; float: left; text-align: center; }
+    figure {
+       margin-bottom: 15px;  
+      img{ width: 100%; height: auto;}
+    }
+}
+
+
+.colum-left { overflow: hidden; margin: 0 -25px;
+    > aside { float:left; width: 32%;padding: 0 25px;}
+    > main { float:right;width: 68%; padding: 0 25px;}
+}
+
+.colum-right { overflow: hidden;
+    > aside { float:right;}
+    > main { float:left;}
+}
+
+
+
+.post { background: $color-white; padding: 80px; margin-bottom: 20px;}
+.entry-meta ul { list-style: none; 
+    & > li{ display: inline-block; 
+        & a {font-size: inherit;}
+    }
+    & li + li::before {
+     content: "|";
+     margin: 0 10px;
+     color: $brand-accent;
+    }
+}
+
+
+.entry-image { padding: 15px 0;
+    img { width: 100%;}
+}
+
+.pagination { list-style: none; padding: 20px 70px; margin: 0px;
+    & > li { display: inline-block; padding: 0 10px;font-family: 'maison_neuebold';
+        & > a {color:$brand-accent; text-decoration: none; display: inline-block; padding: 0 5px;
+            &:hover {color:#000;}
+        }
+        & > span { color:$brand-secondary;}
+        &.disable > a{ opacity:0.8; cursor: default; color:$brand-accent !important;}
+    }
+}
+
+blockquote{
+    border-left: 2px solid $brand-secondary;
+    font-size: 1.7em;
+    line-height: 1.3em;
+    margin: 30px 0;
+    padding: 0px 40px;
+    color: lighten($brand-accent,40%);
+    footer { font-size:initial; color: $brand-accent;}
+}

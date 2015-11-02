@@ -1,0 +1,249 @@
+
+@font-face {
+    font-family: 'maison_neuelight';
+    src: url('../fonts/maisonneuetrial-light-webfont.eot');
+    src: url('../fonts/maisonneuetrial-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/maisonneuetrial-light-webfont.woff2') format('woff2'),
+         url('../fonts/maisonneuetrial-light-webfont.woff') format('woff'),
+         url('../fonts/maisonneuetrial-light-webfont.ttf') format('truetype'),
+         url('../fonts/maisonneuetrial-light-webfont.svg#maison_neue_triallight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'maison_neuemedium';
+    src: url('../fonts/maisonneuetrial-medium-webfont.eot');
+    src: url('../fonts/maisonneuetrial-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/maisonneuetrial-medium-webfont.woff2') format('woff2'),
+         url('../fonts/maisonneuetrial-medium-webfont.woff') format('woff'),
+         url('../fonts/maisonneuetrial-medium-webfont.ttf') format('truetype'),
+         url('../fonts/maisonneuetrial-medium-webfont.svg#maison_neue_trialmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'maison_neuebold';
+    src: url('../fonts/maisonneuebold-webfont.eot');
+    src: url('../fonts/maisonneuebold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/maisonneuebold-webfont.woff2') format('woff2'), url('../fonts/maisonneuebold-webfont.woff') format('woff'), url('../fonts/maisonneuebold-webfont.ttf') format('truetype'), url('../fonts/maisonneuebold-webfont.svg#maison_neuebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'maison_neuebook';
+    src: url('../fonts/maisonneuebook-webfont.eot');
+    src: url('../fonts/maisonneuebook-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/maisonneuebook-webfont.woff2') format('woff2'), url('../fonts/maisonneuebook-webfont.woff') format('woff'), url('../fonts/maisonneuebook-webfont.ttf') format('truetype'), url('../fonts/maisonneuebook-webfont.svg#maison_neuebook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'maison_neuedemi';
+    src: url('../fonts/maisonneuetrial-demi-webfont.eot');
+    src: url('../fonts/maisonneuetrial-demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/maisonneuetrial-demi-webfont.woff2') format('woff2'),
+         url('../fonts/maisonneuetrial-demi-webfont.woff') format('woff'),
+         url('../fonts/maisonneuetrial-demi-webfont.ttf') format('truetype'),
+         url('../fonts/maisonneuetrial-demi-webfont.svg#maison_neue_trial_demiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+/* Website style */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    color: $color-base;
+    background: $bg-color;
+    font-size: $font-size-base;
+    line-height: 28px;
+    font-family: 'maison_neuemedium';
+}
+
+figure { margin: 0px;}
+
+.hide { display: none;}
+.align-center {text-align: center;}
+.inline-block { display: inline-block;}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {margin: 0px 0 15px;line-height: normal; font-weight: normal;font-family: 'maison_neuebold';}
+
+
+h1,
+.h1 {
+    font-size: $font-size-h1;
+
+}
+h2,
+.h2 {
+    font-size: $font-size-h2;
+}
+h3,
+.h3 {
+    font-size: $font-size-h3;
+     font-family: 'maison_neuedemi';
+}
+h4,
+.h4 {
+    font-size: $font-size-h4;
+    font-family: 'maison_neuebook';
+}
+h5,
+.h5 {
+    font-size: $font-size-h5;
+    margin: 0px 0 15px;
+    line-height: normal;
+}
+h6,
+.h6 {
+    font-size: $font-size-h6;
+}
+.caption {
+    color: lighten($color-base, 30%);
+    margin-bottom: 60px;
+}
+.container {
+    width: $container-large;
+    margin: 0 auto;
+    overflow: hidden;
+    &.padding-left {
+        padding-left: 25px;
+    }
+}
+
+.small_container{
+    width: 880px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+.logo {
+    float: left;
+    padding-left: 25px;
+}
+nav {
+    float: left;
+    width: 775px;
+}
+
+/* navigation */
+
+.site-header {
+    background: $color-white;
+    border-top: solid 6px $brand-primary;
+    height: 65px;
+    text-align: center;
+    position: relative;
+    z-index: 55;
+    ul {
+        list-style: none;
+        margin: 0px;
+        display: inline-block;
+        padding: 0px;
+        li {
+            display: inline-block;
+            margin: 0 20px;
+            a {
+                text-decoration: none;
+                color: $color-base;
+                padding: 20px 0;
+                display: inline-block;
+                position: relative;
+                font-size: 1.14em;
+                &:before {
+                    background: $brand-primary;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 2px;
+                    opacity: 0;
+                }
+                &:hover:before {
+                    opacity: 1;
+                }
+            }
+            &:hover .submenu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .submenu {
+            position: absolute;
+            padding: 42px 0;
+            background: $brand-primary;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: 120px;
+            vertical-align: middle;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s ease-in-out;
+            li {
+                display: inline-block;
+                a {
+                    color: $color-white;
+                    padding: 5px 0;
+                    &:hover {
+                        border-bottom: solid 2px $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+.header-login {
+    float: left;
+    padding: 3px 0;
+}
+section {
+    padding: 60px 0;
+}
+.site-banner {
+    height: 500px;
+    background-size: 100% auto; 
+    background-position: center;
+    position: relative;
+}
+.banner-text { position: absolute; left: -25px; bottom: 50px;
+    h1 { background:$brand-secondary; color: $color-white; padding: 20px; margin:20px 0;}
+    h3 { background:$brand-secondary; color: $color-white; padding: 20px; margin:20px 0;}
+}
+
+.banner-caption { background: $color-white; text-align: center;vertical-align: center; padding: 10px 15px;
+    & > * { display: inline-block; margin:0 10px;vertical-align: middle; }
+}
+
+
